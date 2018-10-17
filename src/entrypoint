@@ -1,6 +1,13 @@
 #!/bin/bash
 source /etc/bashrc
-
+id -g ${APP_GROUP} &>/dev/null
+if [ $? -ne 0 ]; then
+   groupadd -g ${APP_GID} ${APP_GROUP}
+fi
+id ${APP_USER} &>/dev/null
+if [ $? -ne 0 ]; then
+    useradd -c "App user" -d ${APP_HOME} -g ${APP_GID} -u ${APP_UID} ${APP_USER}
+fi
 chown -R ${APP_USER}:${APP_GROUP} ${APP_HOME}/${APP_NAME}
 cd ${APP_HOME}/${APP_NAME}
 
