@@ -9,7 +9,7 @@ ENV APP_USER=react \
     APP_NAME=myapp \
     GIT_COMMIT="" \
     IMAGE_HISTORY=" « jenkins-docker-oc-node8-29 « jenkins-docker-oc-base-36 « centos/7 declare -x OLDPWD declare -x PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin declare -x PWD=/ declare -x SHLVL=1 declare -x NODE_VERSION=8.12.0-1nodesource declare -x OLDPWD declare -x PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin declare -x PWD=/ declare -x SHLVL=1" \
-    REACTVR_VERSION="0.3.6" \
+    REACTVR_VERSION="1.0.0" \
     REACT_VERSION="16.5.2"
 
 

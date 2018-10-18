@@ -8,6 +8,10 @@ id ${APP_USER} &>/dev/null
 if [ $? -ne 0 ]; then
     useradd -c "App user" -d ${APP_HOME} -g ${APP_GID} -u ${APP_UID} ${APP_USER}
 fi
+if [ ! -d ${APP_HOME}/${APP_NAME} ]; then
+    cd ${APP_HOME}
+    gosu ${APP_USER}:${APP_GROUP} react-360 init ${APP_NAME}
+fi
 chown -R ${APP_USER}:${APP_GROUP} ${APP_HOME}/${APP_NAME}
 cd ${APP_HOME}/${APP_NAME}
 
